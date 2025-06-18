@@ -1,6 +1,6 @@
 <?php
 
-namespace Rakibdevs\MrzParser\Traits;
+namespace Tomazbc\MrzParserEnhanced\Traits;
 
 use DateTime;
 

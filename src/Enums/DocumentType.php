@@ -1,6 +1,6 @@
 <?php
 
-namespace Rakibdevs\MrzParser\Enums;
+namespace Tomazbc\MrzParserEnhanced\Enums;
 
 abstract class DocumentType
 {

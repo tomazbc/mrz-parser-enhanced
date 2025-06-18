@@ -33,12 +33,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Rakibdevs\\MrzParser\\": "src"
+            "Tomazbc\\MrzParserEnhanced\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Rakibdevs\\MrzParser\\Tests\\": "tests"
+            "Tomazbc\\MrzParserEnhanced\\Tests\\": "tests"
         }
     },
     "scripts": {

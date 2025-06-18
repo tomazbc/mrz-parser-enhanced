@@ -1,11 +1,11 @@
 <?php
 
-namespace Rakibdevs\MrzParser\Parser;
+namespace Tomazbc\MrzParserEnhanced\Parser;
 
-use Rakibdevs\MrzParser\Contracts\ParserInterface;
-use Rakibdevs\MrzParser\Traits\CountryMapper;
-use Rakibdevs\MrzParser\Traits\DateFormatter;
-use Rakibdevs\MrzParser\Traits\GenderMapper;
+use Tomazbc\MrzParserEnhanced\Contracts\ParserInterface;
+use Tomazbc\MrzParserEnhanced\Traits\CountryMapper;
+use Tomazbc\MrzParserEnhanced\Traits\DateFormatter;
+use Tomazbc\MrzParserEnhanced\Traits\GenderMapper;
 
 class VisaMrzParser implements ParserInterface
 {

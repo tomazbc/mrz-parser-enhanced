@@ -1,6 +1,6 @@
 <?php
 
-namespace Rakibdevs\MrzParser\Contracts;
+namespace Tomazbc\MrzParserEnhanced\Contracts;
 
 interface ParserInterface
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Rakibdevs\MrzParser;
+namespace Tomazbc\MrzParserEnhanced;
 
-use Rakibdevs\MrzParser\Enums\DocumentType;
-use Rakibdevs\MrzParser\Exceptions\NotSupportedException;
-use Rakibdevs\MrzParser\Parser\PassportMrzParser;
-use Rakibdevs\MrzParser\Parser\TravelDocument1MrzParser;
-use Rakibdevs\MrzParser\Parser\TravelDocument2MrzParser;
-use Rakibdevs\MrzParser\Parser\VisaMrzParser;
+use Tomazbc\MrzParserEnhanced\Enums\DocumentType;
+use Tomazbc\MrzParserEnhanced\Exceptions\NotSupportedException;
+use Tomazbc\MrzParserEnhanced\Parser\PassportMrzParser;
+use Tomazbc\MrzParserEnhanced\Parser\TravelDocument1MrzParser;
+use Tomazbc\MrzParserEnhanced\Parser\TravelDocument2MrzParser;
+use Tomazbc\MrzParserEnhanced\Parser\VisaMrzParser;
 
 class MrzParser
 {

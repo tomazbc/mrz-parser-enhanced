@@ -1,6 +1,6 @@
 <?php
 
-namespace Rakibdevs\MrzParser\Exceptions;
+namespace Tomazbc\MrzParserEnhanced\Exceptions;
 
 use Exception;
 

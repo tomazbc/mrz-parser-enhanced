@@ -5,7 +5,7 @@
  * https://github.com/tetrahydra/SolidusMRZ
  */
 
-namespace Rakibdevs\MrzParser\Traits;
+namespace Tomazbc\MrzParserEnhanced\Traits;
 
 trait CountryMapper
 {

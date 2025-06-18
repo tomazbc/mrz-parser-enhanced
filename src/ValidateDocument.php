@@ -1,9 +1,9 @@
 <?php
 
-namespace Rakibdevs\MrzParser;
+namespace Tomazbc\MrzParserEnhanced;
 
-use Rakibdevs\MrzParser\Enums\DocumentType;
-use Rakibdevs\MrzParser\Exceptions\InvalidFormatException;
+use Tomazbc\MrzParserEnhanced\Enums\DocumentType;
+use Tomazbc\MrzParserEnhanced\Exceptions\InvalidFormatException;
 
 class ValidateDocument
 {
