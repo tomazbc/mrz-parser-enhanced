@@ -1,17 +1,26 @@
 {
-    "name": "rakibdevs/mrz-parser",
-    "description": "A PHP package for MRZ (Machine Readable Zones) code parser for Passport, Visa & Travel Documents.",
+    "name": "tomazbc/mrz-parser-enhanced",
+    "description": "Enhanced MRZ (Machine Readable Zones) parser with ISO 3166-1 alpha-2 country code support.",
     "keywords": [
-        "rakibdevs",
-        "mrz-parser"
+        "tomazbc",
+        "mrz-parser",
+        "mrz-parser-enhanced",
+        "iso-3166",
+        "alpha-2",
+        "country-codes"
     ],
-    "homepage": "https://github.com/rakibdevs/mrz-parser",
+    "homepage": "https://github.com/tomazbc/mrz-parser-enhanced",
     "license": "MIT",
     "authors": [
         {
             "name": "Md. Rakibul Islam",
             "email": "rakib1708@gmail.com",
-            "role": "Developer"
+            "role": "Original Developer"
+        },
+        {
+            "name": "Tomaž Briški",
+            "email": "tomaz@briski.org",
+            "role": "Enhanced Fork Maintainer"
         }
     ],
     "require": {
