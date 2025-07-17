@@ -17,9 +17,17 @@ trait DateFormatter
     public function formatDate($date, $format = "Y-m-d"): ?string
     {
         if ($this->validateDateFormat($date)) {
-            $dateTime = DateTime::createFromFormat('ymd', $date);
+            $year = substr($date, 0, 2);
+            $month = substr($date, 2, 2);
+            $day = substr($date, 4, 2);
+            
+            // Apply MRZ century logic (00-30 = 2000-2030, 31-99 = 1931-1999)
+            // This fixes the issue where PHP's DateTime 'y' format uses wrong cutoff
+            $fullYear = (int)$year <= 30 ? '20' . $year : '19' . $year;
+            
+            $dateTime = DateTime::createFromFormat('Y-m-d', $fullYear . '-' . $month . '-' . $day);
 
-            return $dateTime->format($format);
+            return $dateTime ? $dateTime->format($format) : null;
         }
 
         return null;
