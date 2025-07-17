@@ -31,6 +31,16 @@ class TravelDocument1MrzParser implements ParserInterface
      * 7408122F1204159UTO<<<<<<<<<<<6
      * ERIKSSON<<ANNA<MARIA<<<<<<<<<<
      */
+
+    /**
+     * Detect MRZ country code format (alpha-2 vs alpha-3)
+     * Alpha-2: I<CC< (position 4 = '<')
+     * Alpha-3: I<CCC (position 4 = letter/digit)
+     */
+    protected function detectCountryCodeFormat(): string
+    {
+        return (substr($this->firstLine, 4, 1) === '<') ? 'alpha-2' : 'alpha-3';
+    }
     protected function setText(string $text): self
     {
         $this->text = $text;
@@ -95,10 +105,17 @@ class TravelDocument1MrzParser implements ParserInterface
 
     /**
      * Get Document Issuer
+     * Handles both alpha-2 (I<CC<) and alpha-3 (I<CCC) formats
      */
     protected function getIssuer(): ?string
     {
-        $issuer = chop(substr($this->firstLine, 2, 3), "<");
+        if ($this->detectCountryCodeFormat() === 'alpha-2') {
+            // Alpha-2: I<CC< - extract 2 characters
+            $issuer = substr($this->firstLine, 2, 2);
+        } else {
+            // Alpha-3: I<CCC - extract 3 characters
+            $issuer = substr($this->firstLine, 2, 3);
+        }
 
         return $this->mapCountry($issuer);
     }
